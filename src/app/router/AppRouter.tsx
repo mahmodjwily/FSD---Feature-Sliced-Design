@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router";
-import { ROUTES } from "../shared/config";
+import { ROUTES } from "../../shared/config";
 import { HomePage } from "../pages/home";
 import { LoginPage } from "../pages/login";
 import { ArticleReadPage } from "../pages/article-read";
