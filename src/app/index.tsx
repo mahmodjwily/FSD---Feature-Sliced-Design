@@ -1,10 +1,12 @@
-import { StoreProvider } from "./providers";
+import { RouterProvider, StoreProvider } from "./providers";
 import { AppRouter } from "./router";
 
 function App() {
   return (
     <StoreProvider>
-      <AppRouter />
+      <RouterProvider>
+        <AppRouter />
+      </RouterProvider>
     </StoreProvider>
   );
 }
