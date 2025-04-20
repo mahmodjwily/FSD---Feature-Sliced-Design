@@ -1,28 +1,101 @@
-# React + TypeScript + Vite
+# 📝 Articles Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-featured articles management app built with **React + TypeScript + Vite**, following the **Feature-Sliced Design (FSD)** architecture pattern. It allows users to **create**, **read**, **update**, and **delete** articles, with data persistence via **JSON Server**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tech Stack
 
-## Expanding the ESLint configuration
+- ⚡ **Vite** – blazing fast build tool
+- ⚛️ **React** – modern UI library
+- 🔷 **TypeScript** – typed JavaScript
+- 🧠 **Redux Toolkit** – for state management
+- 🧾 **React Hook Form** – for efficient form handling
+- 💅 **shadcn/ui** – for accessible and beautiful UI components
+- 🧱 **Feature-Sliced Design (FSD)** – scalable architecture for React apps
+- 🗃 **JSON Server** – mock REST API backend for development
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
+
+## 📂 Project Structure (FSD)
+
+The app follows the **Feature-Sliced Design** methodology. Core layers include:
+
+```
+src/
+├── app/                # App bootstrap & configuration
+├── entities/           # Reusable domain models (e.g., Article)
+├── features/           # Business-level features (e.g., ArticleCRUD)
+├── shared/             # Shared utils, UI components, styles
+├── pages/              # Page-level components with layout
+└── widgets/            # UI building blocks (e.g., ArticleList)
+```
+
+---
+
+## 📦 Installation
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/mahmodjwily/FSD---Feature-Sliced-Design.git
+cd FSD---Feature-Sliced-Design
+```
+
+2. **Install dependencies**
+
+```bash
+npm install
+```
+
+---
+
+## 🛠 Development
+
+Start both the frontend and the backend in separate terminals:
+
+### 1. Start the Vite development server (Frontend)
+
+```bash
+npm run dev
+# App runs on http://localhost:5173
+```
+
+### 2. Start JSON Server (Mock Backend)
+
+```bash
+npm run server
+# JSON Server runs on http://localhost:5000
+```
+
+---
+
+## 📃 Available Scripts
+
+| Script           | Description                          |
+|------------------|--------------------------------------|
+| `npm run dev`    | Starts Vite dev server on port 5173  |
+| `npm run server` | Runs JSON Server on port 5000        |
+| `npm run build`  | Builds the app for production        |
+| `npm run lint`   | Runs ESLint checks                   |
+
+---
+
+## ✅ ESLint & Type-Aware Linting
+
+To enhance code quality and maintainability, this project uses `@typescript-eslint` with type-aware linting.
+
+**Recommended config:**
 
 ```js
 export default tseslint.config({
   extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
     ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
+    // Optional stricter or stylistic rules:
+    // ...tseslint.configs.strictTypeChecked,
+    // ...tseslint.configs.stylisticTypeChecked,
   ],
   languageOptions: {
-    // other options...
     parserOptions: {
       project: ['./tsconfig.node.json', './tsconfig.app.json'],
       tsconfigRootDir: import.meta.dirname,
@@ -31,24 +104,44 @@ export default tseslint.config({
 })
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+You can also install React-specific lint rules:
 
 ```js
-// eslint.config.js
 import reactX from 'eslint-plugin-react-x'
 import reactDom from 'eslint-plugin-react-dom'
 
 export default tseslint.config({
   plugins: {
-    // Add the react-x and react-dom plugins
     'react-x': reactX,
     'react-dom': reactDom,
   },
   rules: {
-    // other rules...
-    // Enable its recommended typescript rules
     ...reactX.configs['recommended-typescript'].rules,
     ...reactDom.configs.recommended.rules,
   },
 })
 ```
+
+---
+
+## 📘 Notes
+
+- Articles are stored and served from a `db.json` file using JSON Server.
+- Forms are handled using **react-hook-form** for performance and simplicity.
+- UI components follow **shadcn/ui** standards for accessibility and styling.
+- The application follows a modular, scalable architecture using **FSD**.
+
+---
+
+## 🧪 Future Enhancements
+
+- 🔐 Add authentication (JWT or OAuth)
+- 📚 Add pagination and filtering options
+- 🏷 Tag-based categorization of articles
+- 💬 Add comments or reactions to articles
+
+---
+
+## 📄 License
+
+MIT License © Mahmoud Gewily
