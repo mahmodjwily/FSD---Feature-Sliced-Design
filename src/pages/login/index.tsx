@@ -1,8 +1,9 @@
+import { Navigate } from "react-router";
+import { useSelector } from "react-redux";
+
+import { ROUTES } from "@/shared/config";
 import { RootState } from "@/app/stores/store";
 import { AuthFrom } from "@/features/login/ui";
-import { ROUTES } from "@/shared/config";
-import { useSelector } from "react-redux";
-import { Navigate } from "react-router";
 
 export const LoginPage = () => {
   const { user } = useSelector((state: RootState) => state.user);

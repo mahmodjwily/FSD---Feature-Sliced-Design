@@ -1,6 +1,7 @@
-import { AppDispatch, RootState } from "@/app/stores/store";
-import { login, logout } from "@/entities/user/model";
 import { useDispatch, useSelector } from "react-redux";
+
+import { login, logout } from "@/entities/user/model";
+import { AppDispatch, RootState } from "@/app/stores/store";
 
 export const useLogin = () => {
   const dispatch: AppDispatch = useDispatch();

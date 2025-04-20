@@ -1,11 +1,13 @@
+import { toast } from "sonner";
+
 import { createAsyncThunk } from "@reduxjs/toolkit";
+
 import { loginUser } from "../api";
 import {
   getUserFromLocalStorage,
   removeUserFromLocalStorage,
   setUserToLocalStorage,
 } from "../lib";
-import { toast } from "sonner";
 
 export const login = createAsyncThunk(
   "auth/login",

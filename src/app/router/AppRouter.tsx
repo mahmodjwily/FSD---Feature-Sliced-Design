@@ -1,9 +1,11 @@
 import { Route, Routes } from "react-router";
+
+import { HomePage } from "@/pages/home";
+import { LoginPage } from "@/pages/login";
+import { ArticleReadPage } from "@/pages/article-read";
+import { ArticleEditPage } from "@/pages/article-edit";
+
 import { ROUTES } from "../../shared/config";
-import { HomePage } from "../pages/home";
-import { LoginPage } from "../pages/login";
-import { ArticleReadPage } from "../pages/article-read";
-import { ArticleEditPage } from "../pages/article-edit";
 
 export const AppRouter = () => {
   return (

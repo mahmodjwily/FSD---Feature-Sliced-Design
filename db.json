@@ -1,5 +1,41 @@
 {
   "users": [
-    { "id": "123", "email": "test@example.com", "password": "password" }
+    {
+      "id": "123",
+      "email": "test@example.com",
+      "password": "password"
+    }
+  ],
+  "articles": [
+    {
+      "id": "b6710132-eb14-4ff0-92ac-cc435b3169d4",
+      "title": "Sample Article 4",
+      "body": "This is the body of Sample Article 4. It contains example content for demonstration purposes."
+    },
+    {
+      "id": "8ca82b09-1713-4335-841d-53555f845a75",
+      "title": "Sample Article 5",
+      "body": "This is the body of Sample Article 5. It contains example content for demonstration purposes."
+    },
+    {
+      "id": "b25db00a-07df-48fe-968e-4b074715bebe",
+      "title": "Sample Article 6",
+      "body": "This is the body of Sample Article 6. It contains example content for demonstration purposes."
+    },
+    {
+      "id": "b16e4977-2604-4f17-9694-862e489162c7",
+      "title": "Sample Article 7",
+      "body": "This is the body of Sample Article 7. It contains example content for demonstration purposes."
+    },
+    {
+      "id": "46967985-1d9a-4adc-895a-9e18a75aea56",
+      "title": "Sample Article 8",
+      "body": "This is the body of Sample Article 8. It contains example content for demonstration purposes."
+    },
+    {
+      "id": "82f6b201-a4ae-4620-8a38-78b49a652511",
+      "title": "Sample Article 9",
+      "body": "This is the body of Sample Article 9. It contains example content for demonstration purposes."
+    }
   ]
 }

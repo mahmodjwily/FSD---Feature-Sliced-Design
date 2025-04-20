@@ -1,13 +1,18 @@
-import { Button, Input, Label } from "@/shared/ui";
 import { Controller, useForm } from "react-hook-form";
+
+import { Button, Input, Label } from "@/shared/ui";
+
 import { useLogin } from "../model";
 
 interface AuthFormData {
   email: string;
   password: string;
 }
+
+const defaultValues = { email: "", password: "" };
+
 export const AuthFrom = () => {
-  const { control, handleSubmit } = useForm<AuthFormData>();
+  const { control, handleSubmit } = useForm<AuthFormData>({ defaultValues });
   const { loginUser, isLoading } = useLogin();
 
   const onSubmit = (formData: AuthFormData) => {

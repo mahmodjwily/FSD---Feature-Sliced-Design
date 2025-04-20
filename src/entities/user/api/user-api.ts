@@ -1,4 +1,5 @@
 import { axiosInstance } from "@/shared/api";
+
 import { User } from "../model";
 
 export const loginUser = async (

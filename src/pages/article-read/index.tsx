@@ -1,0 +1,27 @@
+import { useSelector } from "react-redux";
+import { Link, useParams } from "react-router";
+
+import { Button } from "@/shared/ui";
+import { RootState } from "@/app/stores/store";
+
+export const ArticleReadPage = () => {
+  const { id } = useParams<{ id: string }>();
+  const article = useSelector((state: RootState) =>
+    state.article.articles.find((a) => a.id === id),
+  );
+
+  if (!article?.id) {
+    return <div className="p-6">No Articles</div>;
+  }
+
+  return (
+    <div className="max-w-2xl mx-auto p-6 space-y-4">
+      <h1 className="text-3xl font-bold">{article.title}</h1>
+      <p className="text-muted-foreground">{article.body}</p>
+
+      <Link to={`/articles/${id}/edit`}>
+        <Button variant="outline">Edit</Button>
+      </Link>
+    </div>
+  );
+};
