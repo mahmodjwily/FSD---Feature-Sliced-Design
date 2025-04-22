@@ -142,6 +142,12 @@ export default tseslint.config({
 
 ---
 
+## 🧪 Live Demo
+
+https://fsd-feature-sliced-design.vercel.app/
+
+---
+
 ## 📄 License
 
 MIT License © Mahmoud Gewily
