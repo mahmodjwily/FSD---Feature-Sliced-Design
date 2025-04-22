@@ -65,19 +65,19 @@ npm run dev
 
 ```bash
 npm run server
-# JSON Server runs on http://localhost:5000
+# JSON Server runs on http://localhost:3000
 ```
 
 ---
 
 ## 📃 Available Scripts
 
-| Script           | Description                          |
-|------------------|--------------------------------------|
-| `npm run dev`    | Starts Vite dev server on port 5173  |
-| `npm run server` | Runs JSON Server on port 5000        |
-| `npm run build`  | Builds the app for production        |
-| `npm run lint`   | Runs ESLint checks                   |
+| Script           | Description                         |
+| ---------------- | ----------------------------------- |
+| `npm run dev`    | Starts Vite dev server on port 5173 |
+| `npm run server` | Runs JSON Server on port 3000       |
+| `npm run build`  | Builds the app for production       |
+| `npm run lint`   | Runs ESLint checks                  |
 
 ---
 
@@ -97,29 +97,29 @@ export default tseslint.config({
   ],
   languageOptions: {
     parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
       tsconfigRootDir: import.meta.dirname,
     },
   },
-})
+});
 ```
 
 You can also install React-specific lint rules:
 
 ```js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+import reactX from "eslint-plugin-react-x";
+import reactDom from "eslint-plugin-react-dom";
 
 export default tseslint.config({
   plugins: {
-    'react-x': reactX,
-    'react-dom': reactDom,
+    "react-x": reactX,
+    "react-dom": reactDom,
   },
   rules: {
-    ...reactX.configs['recommended-typescript'].rules,
+    ...reactX.configs["recommended-typescript"].rules,
     ...reactDom.configs.recommended.rules,
   },
-})
+});
 ```
 
 ---
