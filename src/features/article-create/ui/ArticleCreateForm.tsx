@@ -5,22 +5,31 @@ import { RootState } from "@/app/stores/store";
 import { Button, Input, Textarea } from "@/shared/ui";
 
 import { useArticleCreate } from "../model";
+import { IArticle } from "@/entities/article/model";
 
 interface ArticleFormData {
   title: string;
   body: string;
 }
+
+const defaultValues = { body: "", title: "" };
+
 export const ArticleCreateForm = () => {
   const { isLoading } = useSelector((state: RootState) => state.article);
 
-  const { control, handleSubmit } = useForm<ArticleFormData>({
-    defaultValues: { body: "", title: "" },
+  const { reset, control, handleSubmit } = useForm<ArticleFormData>({
+    defaultValues,
   });
 
   const { onSubmit } = useArticleCreate();
 
+  const submitForm = (formData: Omit<IArticle, "id">) => {
+    onSubmit(formData);
+    reset(defaultValues);
+  };
+
   return (
-    <form className="space-y-4" onSubmit={handleSubmit(onSubmit)}>
+    <form className="space-y-4" onSubmit={handleSubmit(submitForm)}>
       <Controller
         name="title"
         control={control}
