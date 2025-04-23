@@ -142,6 +142,16 @@ export default tseslint.config({
 
 ---
 
+## 🔗 Live Demo
+
+[![Live Demo](https://img.shields.io/badge/live-demo-blueviolet)](https://fsd-feature-sliced-design.vercel.app/)
+
+Login:
+- Email: test@example.com
+- Password: password
+
+---
+
 ## 📄 License
 
 MIT License © Mahmoud Gewily
